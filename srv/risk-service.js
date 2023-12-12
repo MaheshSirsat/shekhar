@@ -40,7 +40,8 @@ req.query.where("LastName <> '' and FirstName <> '' ");
 return await BPsrv.transaction(req).send({
 query: req.query,
 headers: {
-apikey: "mNoXz9PclUGQvTEBj8hqemBxTjX3BmJQ",
+// apikey: "mNoXz9PclUGQvTEBj8hqemBxTjX3BmJQ",
+apikey:process.env.apikey,
 },
 });
 });
@@ -112,7 +113,8 @@ this.on("READ", Risks, async (req, next) => {
 
         headers: {
 
-            apikey:"mNoXz9PclUGQvTEBj8hqemBxTjX3BmJQ",
+            // apikey:"mNoXz9PclUGQvTEBj8hqemBxTjX3BmJQ",
+            apikey:process.env.apikey,
 
         }
 
